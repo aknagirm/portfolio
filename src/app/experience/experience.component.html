@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="fs-4 side-only-box-border text-center">
+      <span>Explore. Learn. Build</span>
+    </div>
+    <div class="row">
+      <div *ngFor="let exp of workExperience" class="col-md-6 card px-0">
+        <div class="card-header">
+          <h4 class="mb-0">{{ exp.name }}</h4>
+          <span
+            ><small>( {{ exp.start }} - {{ exp.end }} )</small></span
+          >
+          <div>
+            <span>{{ exp.position }}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <strong>Projects:</strong>
+          <ul>
+            <li *ngFor="let project of exp.projects">
+              {{ project }}
+            </li>
+          </ul>
+          <strong>Domain: {{ exp.domain.join(", ") }}</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

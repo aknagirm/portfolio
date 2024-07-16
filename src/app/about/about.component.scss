@@ -1,0 +1,26 @@
+.about-container-wrapper {
+  .about-container {
+    text-wrap: balance;
+    h1 {
+      font-size: 3rem;
+    }
+    .technology-stack-icon {
+      i {
+        margin-right: 10px;
+        font-size: 1.7rem;
+      }
+    }
+    .contact-details,
+    .externnal-links {
+      i {
+        color: #00ff99;
+      }
+    }
+    .externnal-links {
+      i {
+        font-size: 1.2rem;
+        margin-left: 10px;
+      }
+    }
+  }
+}
