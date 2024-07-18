@@ -23,9 +23,6 @@
   $theme-change-icon-color: #757575;
   $theme-highlight-color: #00ff99;
 }
-:root {
-  --font-color: yellow;
-}
 
 .side-only-box-border {
   margin-bottom: 3rem;
@@ -60,26 +57,25 @@
     &:before {
       top: -9px;
       left: -15px;
-      border-left-color: #f44336;
-      border-top-color: #f44336;
+      border-left-color: var(--highlighted-font-color);
+      border-top-color: var(--highlighted-font-color);
     }
     &:after {
       bottom: -9px;
       right: -15px;
-      border-right-color: #f44336;
-      border-bottom-color: #f44336;
+      border-right-color: var(--highlighted-font-color);
+      border-bottom-color: var(--highlighted-font-color);
     }
   }
 }
 
 .highlight-color-text {
-  color: #f44336;
+  color: var(--highlighted-font-color);
 }
 
 .button-primary {
   font-size: 0.9rem;
-  border: 5px solid red;
-  color: red;
+  border: 5px solid var(--highlighted-font-color);
   border-radius: 30px;
   width: 120px;
   height: 35px;

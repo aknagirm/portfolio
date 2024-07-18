@@ -1,0 +1,44 @@
+.theme-icon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.slider-wrapper {
+  height: 26px;
+  width: 50px;
+  position: relative;
+  margin-right: 15px;
+
+  > input {
+    visibility: none;
+    height: 0;
+    width: 0;
+  }
+
+  .slider {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 22px;
+    background-color: red;
+  }
+
+  .slider::before {
+    display: block;
+    margin: 3px;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+  }
+
+  > input:checked + .slider::before {
+    transform: translateX(24px);
+  }
+}

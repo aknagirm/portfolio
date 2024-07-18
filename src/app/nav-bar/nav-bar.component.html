@@ -1,27 +1,22 @@
-<div class="container-fluid shadow mb-5 position-fixed nav-bar-wrapper">
-  <nav class="container position-relative d-flex justify-content-between py-2">
+<div class="container-fluid shadow position-fixed nav-bar-wrapper">
+  <nav
+    class="container position-relative d-flex justify-content-between py-2 h-100"
+  >
     <div class="left-item d-flex justify-content-between align-items-baseline">
       <div class="image-container rounded-circle overflow-hidden">
         <img src="../../assets/img-75x75.png" class="w-100 h-100" alt="" />
       </div>
       <p class="ms-3 fs-5 highlight-color-text">aknagirm</p>
     </div>
-    <div class="right-item display-flex justify-content-between">
-      <button type="button" class="btn">About</button>
-      <button type="button" class="btn">Experience</button>
-      <button type="button" class="btn">Projects</button>
-      <button type="button" class="btn">Education</button>
-      <!-- <div class="d-inline-block">
-        <button type="button" class="btn color-change-btn">A</button>
-        <div class="">
-          <div
-            *ngFor="let color of colorList"
-            class="circle-dot"
-            [ngStyle]="{ 'background-color': color }"
-            (click)="fontColorChange(color)"
-          ></div>
+    <div class="d-flex">
+      <div class="right-item d-flex align-items-center">
+        <div>
+          <button type="button" class="btn">About</button>
+          <button type="button" class="btn">Experience</button>
+          <button type="button" class="btn">Projects</button>
+          <button type="button" class="btn">Education</button>
         </div>
-      </div> -->
+      </div>
     </div>
   </nav>
 </div>

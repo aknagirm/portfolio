@@ -1,0 +1,23 @@
+<div
+  class="settings-container shadow"
+  #sliderContainer
+  [@settingsSlider]="isSliderOpen ? 'expand' : 'collapse'"
+>
+  <div class="setting-icon" (click)="sliderToggle()">
+    <i class="fa-solid fa-gear"></i>
+  </div>
+  <div class="m-2">
+    <app-slider></app-slider>
+  </div>
+  <hr class="m-0" />
+  <div class="d-flex justify-content-between" #colorPicker role="button">
+    <ng-container *ngFor="let color of colorList; let index = index">
+      <div
+        class="circle-dot m-2"
+        [ngStyle]="{ 'background-color': color }"
+        (click)="fontColorChange(color)"
+        [id]="'color-circle-' + index"
+      ></div>
+    </ng-container>
+  </div>
+</div>
