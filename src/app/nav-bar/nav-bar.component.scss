@@ -17,3 +17,14 @@
     font-size: 1.2rem;
   }
 }
+
+.nav-bar-btn-bottom-wrapper {
+  position: fixed;
+  height: 55px;
+  bottom: 35px;
+  z-index: 2;
+  .nav-bar-btn-bottom {
+    background-color: var(--secondary-bg-color);
+    border-radius: 25px;
+  }
+}
