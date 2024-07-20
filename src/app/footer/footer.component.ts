@@ -21,4 +21,11 @@ export class FooterComponent implements OnInit {
   downloadCV() {
     window.open('assets/CV2024.pdf');
   }
+
+  openMail() {
+    window.open(
+      'https://mail.google.com/mail/?view=cm&fs=1&to=mriganka.s.sarkar@gmail.com',
+      '_blank'
+    );
+  }
 }

@@ -31,29 +31,23 @@ export class SettingsComponent implements OnInit {
   isSliderOpen = false;
   currentColor: string = '';
   colorList = [
-    '#8f19e8', // purple #BB86FC
-    '#03DAC6', // green
-    '#CF6679', // red
+    '#3a7ca5', // #8bb9fe
+    '#CF6679', // red #ea868f-darkred #e685b5
+    '#03DAC6', // green #75b798-darkgreen
+    '#fbb917',
+    '#BB86FC', // purple #BB86FC
   ];
 
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.fontColorChange(this.colorList[0]);
+    this.fontColorChange(this.colorList[1]);
     this.currentColor = getComputedStyle(
       document.documentElement
     ).getPropertyValue('--highlighted-font-color');
 
-    this.renderer.listen('window', 'click', (event: Event) => {
-      const clickedElementId = (event.target as Element).id;
-
-      const childElem = Array.prototype.slice
-        .call(this.colorPicker.nativeElement.children)
-        .map((element) => (element as Element).id);
-
-      /* if (!childElem.includes(clickedElementId) && this.isColorPickerVisible) {
-        this.isColorPickerVisible = false;
-      } */
+    this.renderer.listen('window', 'click', () => {
+      this.isSliderOpen = false;
     });
   }
 

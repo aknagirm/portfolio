@@ -1,6 +1,14 @@
 <div class="theme-icon">
+  <i
+    class="fa-regular fa-moon"
+    [ngStyle]="{ opacity: isDarkTheme ? 1 : 0.2 }"
+  ></i>
   <label class="slider-wrapper" for="slider-input">
     <input type="checkbox" id="slider-input" (change)="changeTheme()" />
     <span class="slider"></span>
   </label>
+  <i
+    class="fa-regular fa-sun"
+    [ngStyle]="{ opacity: !isDarkTheme ? 1 : 0.2 }"
+  ></i>
 </div>

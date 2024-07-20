@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables";
+
 .about-container-wrapper {
   .about-container {
     text-wrap: balance;
@@ -6,7 +8,7 @@
     }
     .technology-stack-icon {
       i {
-        margin-right: 10px;
+        margin-right: $about-technology-button-gap;
         font-size: 1.7rem;
       }
     }
@@ -14,7 +16,7 @@
     .externnal-links {
       i {
         font-size: 1.2rem;
-        margin-left: 10px;
+        margin-left: $about-external-button-gap;
       }
     }
   }

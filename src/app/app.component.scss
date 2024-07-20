@@ -1,7 +1,15 @@
+@import "../assets/scss/variables";
+
 .main-body {
   position: relative;
-  top: 100px;
+  top: $main-body-top-position-buffer;
 }
 hr {
   margin: 5rem 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  hr {
+    margin: 3rem 3rem;
+  }
 }

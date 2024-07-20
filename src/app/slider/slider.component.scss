@@ -1,15 +1,23 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/colors";
+
+$slider-wrapper-height: $color-dot-size + ($slider-wrapper-btn-margin * 2);
+$slider-wrapper-width: $slider-wrapper-height * 2;
+
 .theme-icon {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: space-around;
+  i {
+    font-size: $setting-icon-size;
+  }
 }
 
 .slider-wrapper {
-  height: 26px;
-  width: 50px;
+  height: $slider-wrapper-height;
+  width: $slider-wrapper-width;
   position: relative;
-  margin-right: 15px;
 
   > input {
     visibility: none;
@@ -23,22 +31,22 @@
     width: 100%;
     top: 0;
     left: 0;
-    border-radius: 22px;
-    background-color: red;
+    border-radius: $slider-wrapper-height;
+    background-color: var(--primary-font-color);
   }
 
   .slider::before {
     display: block;
-    margin: 3px;
+    margin: $slider-wrapper-btn-margin;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: $color-dot-size;
+    width: $color-dot-size;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--primary-bg-color);
     transition: 0.4s;
   }
 
   > input:checked + .slider::before {
-    transform: translateX(24px);
+    transform: translateX($slider-wrapper-height);
   }
 }

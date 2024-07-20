@@ -1,14 +1,19 @@
-@import "../../assets/colors";
+@import "../../assets/scss/colors";
+@import "../../assets/scss/variables";
 
 .image-container {
-  background-color: $img-container-bg;
-  height: 50px;
-  width: 50px;
+  background-color: var(--primary-font-color);
+  height: $image-icon-small-size;
+  width: $image-icon-small-size;
 }
 
 .nav-bar-wrapper {
-  background-color: #212529;
+  background-color: var(--primary-bg-color);
   z-index: 2;
-  height: 65px;
+  height: $top-nav-bar-height;
   overflow: visible;
+  button {
+    color: var(--primary-font-color);
+    font-size: 1.2rem;
+  }
 }

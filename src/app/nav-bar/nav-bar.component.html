@@ -2,20 +2,30 @@
   <nav
     class="container position-relative d-flex justify-content-between py-2 h-100"
   >
-    <div class="left-item d-flex justify-content-between align-items-baseline">
+    <div class="left-item d-flex justify-content-between">
       <div class="image-container rounded-circle overflow-hidden">
         <img src="../../assets/img-75x75.png" class="w-100 h-100" alt="" />
       </div>
-      <p class="ms-3 fs-5 highlight-color-text">aknagirm</p>
+      <h2 class="ms-3 highlight-color-text">aknagirm</h2>
     </div>
     <div class="d-flex">
       <div class="right-item d-flex align-items-center">
-        <div>
-          <button type="button" class="btn">About</button>
-          <button type="button" class="btn">Experience</button>
-          <button type="button" class="btn">Projects</button>
-          <button type="button" class="btn">Education</button>
-        </div>
+        <button type="button" class="btn" (click)="scrollIntoView('about')">
+          About
+        </button>
+        <button
+          type="button"
+          class="btn"
+          (click)="scrollIntoView('experience')"
+        >
+          Experience
+        </button>
+        <button type="button" class="btn" (click)="scrollIntoView('project')">
+          Projects
+        </button>
+        <button type="button" class="btn" (click)="scrollIntoView('contact')">
+          Education
+        </button>
       </div>
     </div>
   </nav>

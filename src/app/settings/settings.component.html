@@ -1,20 +1,24 @@
 <div
   class="settings-container shadow"
+  (click)="$event.stopPropagation()"
   #sliderContainer
   [@settingsSlider]="isSliderOpen ? 'expand' : 'collapse'"
 >
   <div class="setting-icon" (click)="sliderToggle()">
     <i class="fa-solid fa-gear"></i>
   </div>
-  <div class="m-2">
+  <div class="mx-3 my-4">
     <app-slider></app-slider>
   </div>
   <hr class="m-0" />
-  <div class="d-flex justify-content-between" #colorPicker role="button">
+  <div class="d-flex justify-content-evenly my-4" #colorPicker role="button">
     <ng-container *ngFor="let color of colorList; let index = index">
       <div
-        class="circle-dot m-2"
-        [ngStyle]="{ 'background-color': color }"
+        class="circle-dot"
+        [ngStyle]="{
+          'background-color': color,
+          transform: 'scale(' + (currentColor === color ? 1.2 : 1) + ')'
+        }"
         (click)="fontColorChange(color)"
         [id]="'color-circle-' + index"
       ></div>
