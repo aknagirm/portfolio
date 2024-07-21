@@ -24,6 +24,9 @@
   bottom: 35px;
   z-index: 2;
   .nav-bar-btn-bottom {
+    .btn {
+      color: var(--primary-font-color);
+    }
     background-color: var(--secondary-bg-color);
     border-radius: 25px;
   }
