@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -6,15 +6,23 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit {
-  isDarkTheme = true;
+  @ViewChild('sliderInput') sliderInput!: HTMLInputElement;
+
+  isLightTheme = false;
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
   changeTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.isDarkTheme
-      ? this.renderer.removeClass(document.body, 'light-theme')
-      : this.renderer.addClass(document.body, 'light-theme');
+    this.isLightTheme
+      ? this.renderer.addClass(document.body, 'light-theme')
+      : this.renderer.removeClass(document.body, 'light-theme');
+  }
+
+  changeThemeToLight(theme: boolean) {
+    if (theme !== this.isLightTheme) {
+      this.isLightTheme = theme;
+      this.changeTheme();
+    }
   }
 }

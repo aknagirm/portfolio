@@ -1,14 +1,23 @@
 <div class="theme-icon">
   <i
     class="fa-regular fa-moon"
-    [ngStyle]="{ opacity: isDarkTheme ? 1 : 0.2 }"
+    role="button"
+    [ngStyle]="{ opacity: !isLightTheme ? 1 : 0.2 }"
+    (click)="changeThemeToLight(false)"
   ></i>
   <label class="slider-wrapper" for="slider-input">
-    <input type="checkbox" id="slider-input" (change)="changeTheme()" />
+    <input
+      type="checkbox"
+      id="slider-input"
+      [(ngModel)]="isLightTheme"
+      (change)="changeTheme()"
+    />
     <span class="slider"></span>
   </label>
   <i
     class="fa-regular fa-sun"
-    [ngStyle]="{ opacity: !isDarkTheme ? 1 : 0.2 }"
+    role="button"
+    [ngStyle]="{ opacity: isLightTheme ? 1 : 0.2 }"
+    (click)="changeThemeToLight(true)"
   ></i>
 </div>

@@ -1,22 +1,19 @@
 @import "../../assets/scss/variables";
 
 .footer-container {
-  min-height: $footer-height;
+  padding-bottom: $footer-end-offset;
   .image-container {
     width: 10%;
     background-color: var(--primary-font-color);
     float: left;
+  }
+  .email-btn {
+    color: var(--primary-font-color);
   }
 }
 .externnal-links {
   i {
     font-size: 1.2rem;
     margin-left: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 786px) {
-  .footer-container {
-    min-height: $footer-height * 1.9;
   }
 }
