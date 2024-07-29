@@ -1,0 +1,62 @@
+<div class="container time-complexity-wrapper shadow w-md-50 position-relative">
+  <h3>Time Complexity Practice Questions</h3>
+  <div class="row">
+    <div class="col-md-7">
+      <p>
+        This article is mainly aimed to practice and brush up the concept of
+        time and space complexity. Here we will understand the algorithms and
+        try to figure out the the complexity for that. Every question will have
+        coresponding explanations. By the end of this article, you will have a
+        better understanding of time and space complexity and learn various
+        methods to optimize them for more efficient solutions.
+      </p>
+      <p>
+        <strong>Time Complexity:</strong> The time complexity of an algorithm
+        quantifies the amount of time taken by an algorithm to run as a function
+        of the length of the input.
+      </p>
+      <p>
+        It needs to be noted that this calculation is asymptotically efficient.
+        In real world execution time can differ based on the input numbers.
+        There can be best case (least time needed) scenario, worst case (maximum
+        time needed) scenarion and average scenario performance check.
+      </p>
+      <p>
+        We denote best case, worst casea and average with
+        <strong>big Omega (Ω), big O (O) and big Theta (Θ)</strong> notation
+        respectively
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img src="assets/time_complexity_graph.png" alt="" class="w-100" />
+    </div>
+  </div>
+
+  <div *ngFor="let eachTimeComplexity of timeComplexity; let index = index">
+    <div class="row justify-content-between gx-0 align-items-center">
+      <h5>Problem {{ index + 1 }}</h5>
+      <div class="col-md-3 col-sm-4 border">
+        <pre>
+          <code>
+            {{eachTimeComplexity.code}}
+          </code>
+        </pre>
+      </div>
+      <div class="col-md-7">
+        <p>
+          <strong>Answer:</strong>
+          <span class="font-italic ms-2">{{ eachTimeComplexity.answer }}</span>
+        </p>
+        <hr />
+        <p>
+          <strong>Explanation:</strong>
+          <span [innerHTML]="eachTimeComplexity.explaination"> </span>
+        </p>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <hr />
+</div>
+<!-- <app-footer></app-footer> -->

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderComponent } from './slider/slider.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FormsModule } from '@angular/forms';
+import { TimeComplexityComponent } from './time-complexity/time-complexity.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     SliderComponent,
     SettingsComponent,
+    TimeComplexityComponent,
   ],
   imports: [
     BrowserModule,
