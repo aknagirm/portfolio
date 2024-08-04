@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
   }
 
   downloadCV() {
-    window.open('assets/CV2024.pdf');
+    window.open('assets/CV_2024.pdf');
   }
 
   openMail() {
