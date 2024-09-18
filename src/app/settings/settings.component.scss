@@ -32,5 +32,19 @@ $setting-icon-pos: (($setting-icon-gap * 2) + $setting-icon-size) * -1;
   i {
     margin-left: $setting-icon-gap;
     margin-right: $setting-icon-gap;
+    cursor: pointer;
+    animation: rotate 5s linear infinite;
+    &:hover {
+      animation-play-state: paused
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
